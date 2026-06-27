@@ -1,14 +1,13 @@
 import json
 import smtplib
 from email.mime.text import MIMEText
-
+import os
 
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 
-EMAIL = "sbcrafts29@gmail.com"
-PASSWORD = "lcyd wbhn wylt ewtg"
-
+EMAIL = os.getenv("EMAIL")
+PASSWORD = os.getenv("EMAIL_APP_PASSWORD")
 
 def send_email(event, context):
 
